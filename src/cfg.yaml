@@ -1,0 +1,7 @@
+data_source:
+    groups_desc: data/small_group_description.csv
+    train_x: data/transactions_train.csv
+    test_x: data/transactions_test.csv
+    train_target: data/train_target.csv
+    test_target: data/test.csv
+    
