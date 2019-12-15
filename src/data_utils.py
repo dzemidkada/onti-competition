@@ -32,7 +32,7 @@ class DataSource:
         if self._data:
             return
         self._data = dict()
-        for key, path in self._cfg.items():
+        for key, path in self._cfg['data_source'].items():
             print(f'Reading {key}...')
             self._data[key] = pd.read_csv(adjust_path(path))
     
@@ -64,6 +64,11 @@ class DataSource:
         if df is None:
             return
         self._data[data] = df
+    
+    def add_features(self, name, path):
+        with open(path, 'rb') as f:
+            features = np.load(f, allow_pickle = True)
+        self.set_data(name, features)
     
     def __str__(self):
         return '\n'.join(

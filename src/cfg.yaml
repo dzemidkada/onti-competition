@@ -4,4 +4,13 @@ data_source:
     test_x: data/transactions_test.csv
     train_target: data/train_target.csv
     test_target: data/test.csv
-    
+global_features:
+    train_set: data/global_features/train_features.npy
+    valid_set: data/global_features/valid_features.npy
+ts_features:
+    train_set:
+        small_group_seq: data/ts_max_features/train_groups.npy
+        money_seq: data/ts_max_features/train_money_seq.npy
+    valid_set:
+        small_group_seq: data/ts_max_features/valid_groups.npy
+        money_seq: data/ts_max_features/valid_money_seq.npy
