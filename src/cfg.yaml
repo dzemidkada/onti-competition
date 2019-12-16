@@ -14,3 +14,16 @@ ts_features:
     valid_set:
         small_group_seq: data/ts_max_features/valid_groups.npy
         money_seq: data/ts_max_features/valid_money_seq.npy
+lgbm_params:
+    n_estimators: 300
+    max_depth: 8
+    learning_rate: 0.05
+    num_leaves: 31
+    class_weight: 'balanced'
+    random_state: 42
+    seed: 58
+    bagging_seed: 3
+    feature_fraction_seed: 2
+    data_random_seed: 1
+    verbose: -1
+    silent: True
